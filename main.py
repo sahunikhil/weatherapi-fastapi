@@ -54,7 +54,6 @@ async def get_lat_lon(city: str):
             data = response.json()
         if data:
             print(data)
-            print(data[0]["lat"], data[0]["lon"])
             return data[0]["lat"], data[0]["lon"]
         return None, None
     except Exception as e:
@@ -68,10 +67,10 @@ async def get_weather(city: str):
         files = [os.path.join(STORAGE, f) for f in os.listdir(STORAGE)if os.path.isfile(os.path.join(STORAGE, f))]
         if files:
             latest_file = max(files, key=os.path.getmtime)
-            if (latest_file.split("_")[0] == city) and ((datetime.datetime.now() - datetime.datetime.strptime(latest_file.split("_")[1], "%Y-%m-%dT%H:%M:%S")) <= datetime.timedelta(minutes=5)):
+            if (latest_file.split("_")[0].split()[0].replace("./data/", "") == city) and ((datetime.datetime.now() - datetime.datetime.strptime(latest_file.split("_")[1].replace(".json", ""), "%Y-%m-%dT%H:%M:%S")) <= datetime.timedelta(minutes=5)):
                 async with aiofiles.open(latest_file, 'r') as f:
                     json_string = await f.read()
-                    return json.loads(json_string)
+                return json.loads(json_string)
             
         # Get latitude and longitude using Nominatim
         lat, lon = await get_lat_lon(city)

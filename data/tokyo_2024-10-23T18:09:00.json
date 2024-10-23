@@ -1,0 +1,25 @@
+{
+    "latitude": 35.7,
+    "longitude": 139.75,
+    "generationtime_ms": 0.03707408905029297,
+    "utc_offset_seconds": 32400,
+    "timezone": "Asia/Tokyo",
+    "timezone_abbreviation": "JST",
+    "elevation": 27.0,
+    "current_units": {
+        "time": "iso8601",
+        "interval": "seconds",
+        "temperature_2m": "\u00b0C",
+        "rain": "mm",
+        "showers": "mm",
+        "snowfall": "cm"
+    },
+    "current": {
+        "time": "2024-10-23T21:30",
+        "interval": 900,
+        "temperature_2m": 24.1,
+        "rain": 0.0,
+        "showers": 0.0,
+        "snowfall": 0.0
+    }
+}
