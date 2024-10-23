@@ -63,7 +63,7 @@ Here's the updated section for **Testing the `/weather` Endpoint** in the README
 
 ---
 
-### 6. Testing the `/weather` Endpoint
+### 5. Testing the `/weather` Endpoint
 
 Once the FastAPI server is running (typically at `http://127.0.0.1:8000` by default), you can test the `/weather` endpoint by making a `GET` request with a city name as the query parameter.
 
