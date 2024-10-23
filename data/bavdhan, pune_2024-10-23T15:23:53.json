@@ -1,0 +1,25 @@
+{
+    "latitude": 18.5,
+    "longitude": 73.75,
+    "generationtime_ms": 0.03600120544433594,
+    "utc_offset_seconds": 19800,
+    "timezone": "Asia/Kolkata",
+    "timezone_abbreviation": "IST",
+    "elevation": 606.0,
+    "current_units": {
+        "time": "iso8601",
+        "interval": "seconds",
+        "temperature_2m": "\u00b0C",
+        "rain": "mm",
+        "showers": "mm",
+        "snowfall": "cm"
+    },
+    "current": {
+        "time": "2024-10-23T15:15",
+        "interval": 900,
+        "temperature_2m": 30.6,
+        "rain": 0.0,
+        "showers": 0.0,
+        "snowfall": 0.0
+    }
+}
