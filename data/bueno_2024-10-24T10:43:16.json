@@ -1,0 +1,25 @@
+{
+    "latitude": 15.875,
+    "longitude": 120.375,
+    "generationtime_ms": 0.050902366638183594,
+    "utc_offset_seconds": 28800,
+    "timezone": "Asia/Manila",
+    "timezone_abbreviation": "PST",
+    "elevation": 13.0,
+    "current_units": {
+        "time": "iso8601",
+        "interval": "seconds",
+        "temperature_2m": "\u00b0C",
+        "rain": "mm",
+        "showers": "mm",
+        "snowfall": "cm"
+    },
+    "current": {
+        "time": "2024-10-24T13:00",
+        "interval": 900,
+        "temperature_2m": 27.0,
+        "rain": 0.1,
+        "showers": 0.1,
+        "snowfall": 0.0
+    }
+}

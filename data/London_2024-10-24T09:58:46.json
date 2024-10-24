@@ -1,0 +1,25 @@
+{
+    "latitude": 51.5,
+    "longitude": -0.120000124,
+    "generationtime_ms": 0.026941299438476562,
+    "utc_offset_seconds": 3600,
+    "timezone": "Europe/London",
+    "timezone_abbreviation": "BST",
+    "elevation": 16.0,
+    "current_units": {
+        "time": "iso8601",
+        "interval": "seconds",
+        "temperature_2m": "\u00b0C",
+        "rain": "mm",
+        "showers": "mm",
+        "snowfall": "cm"
+    },
+    "current": {
+        "time": "2024-10-24T05:15",
+        "interval": 900,
+        "temperature_2m": 10.1,
+        "rain": 0.0,
+        "showers": 0.0,
+        "snowfall": 0.0
+    }
+}

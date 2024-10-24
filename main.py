@@ -67,7 +67,12 @@ async def get_weather(city: str):
         files = [os.path.join(STORAGE, f) for f in os.listdir(STORAGE)if os.path.isfile(os.path.join(STORAGE, f))]
         if files:
             latest_file = max(files, key=os.path.getmtime)
-            if (latest_file.split("_")[0].split()[0].replace("./data/", "") == city) and ((datetime.datetime.now() - datetime.datetime.strptime(latest_file.split("_")[1].replace(".json", ""), "%Y-%m-%dT%H:%M:%S")) <= datetime.timedelta(minutes=5)):
+            # print(files)
+            # print(latest_file)
+            # print(latest_file.split("_")[0].split()[0].replace("./data/", ""))
+            # print(latest_file.split("_")[0][7:])
+            # print(datetime.datetime.strptime(latest_file.split("_")[1].replace(".json", ""), "%Y-%m-%dT%H:%M:%S"))
+            if (latest_file.split("_")[0][7:] == city) and ((datetime.datetime.now() - datetime.datetime.strptime(latest_file.split("_")[1].replace(".json", ""), "%Y-%m-%dT%H:%M:%S")) <= datetime.timedelta(minutes=5)):
                 async with aiofiles.open(latest_file, 'r') as f:
                     json_string = await f.read()
                 return json.loads(json_string)
@@ -92,3 +97,4 @@ async def get_weather(city: str):
         return {"error": "Failed to get weather data."}
     except Exception as e:
         print(log_exception("get_weather", e))
+        return {"error": str(e)}
